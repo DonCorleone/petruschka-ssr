@@ -192,11 +192,7 @@
     </div>
 </section>
 
-<div appViewportObserver (appViewportObserver)="aboutVisible = $event"></div>
 
-<div appViewportObserver (appViewportObserver)="merchVisible = $event"></div>
-
-<div appViewportObserver (appViewportObserver)="contactVisible = $event"></div>
 
 <footer class="footer">
     <div class="container">
@@ -208,39 +204,31 @@
 
 <router-outlet />
 
-@defer (when videoModalOpen)
-{
-  <app-modal [open]="videoModalOpen" (close)="videoModalOpen = false">
-    <div modal-title>
-      <h4 id="videoModalLabel" class="modal-title sr-only">Music Video</h4>
-    </div>
-    <div modal-body>
-      <div class="video-container">
-        <div class="ratio ratio-16x9">
-          <iframe src="https://www.youtube.com/embed/mCHUw7ACS8o?rel=0" title="YouTube video" allowfullscreen></iframe>
-        </div>
+<app-modal [open]="videoModalOpen" (close)="videoModalOpen = false">
+  <div modal-title>
+    <h4 id="videoModalLabel" class="modal-title sr-only">Music Video</h4>
+  </div>
+  <div modal-body>
+    <div class="video-container">
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/mCHUw7ACS8o?rel=0" title="YouTube video" allowfullscreen></iframe>
       </div>
     </div>
-  </app-modal>
-}
+  </div>
+</app-modal>
 
-@defer (when infoModalOpen)
-{
-  <app-modal [open]="infoModalOpen" (close)="infoModalOpen = false">
-    <div modal-title>
-      <h4 class="modal-title text-center">We are performing at The Fleece, Bristol</h4>
+<app-modal [open]="infoModalOpen" (close)="infoModalOpen = false">
+  <div modal-title>
+    <h4 class="modal-title text-center">We are performing at The Fleece, Bristol</h4>
+  </div>
+  <div modal-body>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim <a href="#">mollis pretium</a> justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede.</p>
+    <div class="center-block text-center">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2486.319931873737!2d-2.59156458423205!3d51.45228217962615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48718e7bd5fd30fd%3A0x9acbbf4d84e5ca8c!2sThe+Fleece!5e0!3m2!1sen!2sus!4v1454805283508" width="640" height="360" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
-    <div modal-body>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim <a href="#">mollis pretium</a> justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede.</p>
-      <div class="center-block text-center">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2486.319931873737!2d-2.59156458423205!3d51.45228217962615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48718e7bd5fd30fd%3A0x9acbbf4d84e5ca8c!2sThe+Fleece!5e0!3m2!1sen!2sus!4v1454805283508" width="640" height="360" frameborder="0" style="border:0" allowfullscreen></iframe>
-      </div>
-    </div>
-  </app-modal>
-}
+  </div>
+</app-modal>
 
-@defer (when aboutVisible)
-{
 <section id="about" class="about-section section text-center">
     <div class="container">
         <h2 class="section-title">About</h2>
@@ -263,10 +251,7 @@
         </div>
     </div>
 </section>
-}
 
-@defer (when merchVisible)
-{
 <section id="merch" class="merch-section section text-center">
     <div class="container">
         <h2 class="section-title">Merch Store</h2>
@@ -291,10 +276,7 @@
         </div>
     </div>
 </section>
-}
 
-@defer (when contactVisible)
-{
 <div id="contact" class="contact-section section text-center">
     <div class="container">
         <h2 class="section-title">Contact</h2>
@@ -336,6 +318,5 @@
             </ul>
   </div>
     </div>
-</div>
-}
+    </div>
   

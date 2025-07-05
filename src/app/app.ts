@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeaderScrollDirective } from './header-scroll.directive';
-import { SmoothScrollDirective } from './smooth-scroll.directive';
-import { CountdownTimerComponent } from './countdown-timer.component';
-import { CarouselComponent } from './carousel.component';
-import { ModalComponent } from './modal.component';
-import {ViewportObserverDirective} from './viewport-observer.directive';
+import { HeaderScrollDirective } from './scroll/header-scroll.directive';
+import { SmoothScrollDirective } from './scroll/smooth-scroll.directive';
+import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { ModalComponent } from './modal/modal.component';
 
 @Component({
   selector: 'app-root',
@@ -15,8 +14,7 @@ import {ViewportObserverDirective} from './viewport-observer.directive';
     SmoothScrollDirective,
     CountdownTimerComponent,
     CarouselComponent,
-    ModalComponent,
-    ViewportObserverDirective
+    ModalComponent
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
