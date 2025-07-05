@@ -5,6 +5,7 @@ import { SmoothScrollDirective } from './smooth-scroll.directive';
 import { CountdownTimerComponent } from './countdown-timer.component';
 import { CarouselComponent } from './carousel.component';
 import { ModalComponent } from './modal.component';
+import {ViewportObserverDirective} from './viewport-observer.directive';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,8 @@ import { ModalComponent } from './modal.component';
     SmoothScrollDirective,
     CountdownTimerComponent,
     CarouselComponent,
-    ModalComponent
+    ModalComponent,
+    ViewportObserverDirective
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
@@ -24,4 +26,7 @@ export class App {
   videoModalOpen = false;
   infoModalOpen = false;
   navbarOpen = false;
+  aboutVisible = false;
+  merchVisible = false;
+  contactVisible = false;
 }
