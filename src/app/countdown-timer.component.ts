@@ -1,8 +1,7 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, input } from '@angular/core';
 
 @Component({
   selector: 'app-countdown-timer',
-  standalone: true,
   template: `
     <span class="countdown-box">
       <span class="days">{{ days }}d </span>
@@ -13,7 +12,7 @@ import { Component, Input, OnDestroy, OnInit } from '@angular/core';
   `
 })
 export class CountdownTimerComponent implements OnInit, OnDestroy {
-  @Input() targetDate: string = '';
+  readonly targetDate = input<string>('');
   days: number = 0;
   hours: number = 0;
   minutes: number = 0;
@@ -32,7 +31,7 @@ export class CountdownTimerComponent implements OnInit, OnDestroy {
   }
 
   private updateCountdown() {
-    const target = new Date(this.targetDate).getTime();
+    const target = new Date(this.targetDate()).getTime();
     const now = new Date().getTime();
     let secondsLeft = Math.max(0, Math.floor((target - now) / 1000));
     this.days = Math.floor(secondsLeft / (3600 * 24));

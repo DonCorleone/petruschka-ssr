@@ -1,16 +1,17 @@
-import { Directive, HostListener, Input } from '@angular/core';
+import { Directive, HostListener, input } from '@angular/core';
 
 @Directive({
   selector: '[appSmoothScroll]'
 })
 export class SmoothScrollDirective {
-  @Input('href') href: string | undefined;
+  readonly href = input<string>();
 
   @HostListener('click', ['$event'])
   onClick(event: Event) {
-    if (this.href && this.href.startsWith('#')) {
+    const href = this.href();
+    if (href && href.startsWith('#')) {
       event.preventDefault();
-      const target = document.querySelector(this.href);
+      const target = document.querySelector(href);
       if (target) {
         const yOffset = 51; // header height
         const y = (target as HTMLElement).getBoundingClientRect().top + window.pageYOffset - yOffset;

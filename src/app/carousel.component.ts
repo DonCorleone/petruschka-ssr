@@ -1,18 +1,17 @@
-import { Component, Input } from '@angular/core';
-import { NgFor, NgTemplateOutlet } from '@angular/common';
+import { Component, input } from '@angular/core';
+import { NgTemplateOutlet } from '@angular/common';
 
 @Component({
   selector: 'app-carousel',
-  standalone: true,
-  imports: [NgFor, NgTemplateOutlet],
+  imports: [NgTemplateOutlet],
   template: `
     <div class="carousel">
       <div class="carousel-inner">
-        <ng-container *ngFor="let slide of slides; let i = index">
+        @for (slide of slides(); track slide; let i = $index) {
           <div class="carousel-item" [class.active]="i === activeIndex">
             <ng-container *ngTemplateOutlet="slide"></ng-container>
           </div>
-        </ng-container>
+        }
       </div>
       <button class="carousel-control-prev" (click)="prev()" aria-label="Previous">
         <span class="carousel-control-prev-icon"></span>
@@ -21,18 +20,18 @@ import { NgFor, NgTemplateOutlet } from '@angular/common';
         <span class="carousel-control-next-icon"></span>
       </button>
     </div>
-  `,
+    `,
   styleUrls: ['./carousel.component.css']
 })
 export class CarouselComponent {
-  @Input() slides: any[] = [];
+  readonly slides = input<any[]>([]);
   activeIndex = 0;
 
   prev() {
-    this.activeIndex = (this.activeIndex - 1 + this.slides.length) % this.slides.length;
+    this.activeIndex = (this.activeIndex - 1 + this.slides().length) % this.slides().length;
   }
 
   next() {
-    this.activeIndex = (this.activeIndex + 1) % this.slides.length;
+    this.activeIndex = (this.activeIndex + 1) % this.slides().length;
   }
 }

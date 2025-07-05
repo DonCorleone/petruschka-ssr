@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostListener, Renderer2, Inject } from '@angular/core';
+import { Directive, ElementRef, HostListener, Renderer2, inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { PLATFORM_ID } from '@angular/core';
 
@@ -6,11 +6,10 @@ import { PLATFORM_ID } from '@angular/core';
   selector: '[appHeaderScroll]'
 })
 export class HeaderScrollDirective {
-  constructor(
-    private el: ElementRef,
-    private renderer: Renderer2,
-    @Inject(PLATFORM_ID) private platformId: Object
-  ) {}
+  private el = inject(ElementRef);
+  private renderer = inject(Renderer2);
+  private platformId = inject<Object>(PLATFORM_ID);
+
 
   @HostListener('window:scroll')
   @HostListener('window:resize')
