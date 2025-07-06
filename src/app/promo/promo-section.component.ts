@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { CarouselComponent } from '../carousel/carousel.component';
 import { CountdownTimerComponent } from '../countdown-timer/countdown-timer.component';
+import { CarouselComponent } from '../carousel/carousel.component';
 
 @Component({
   selector: 'app-promo-section',

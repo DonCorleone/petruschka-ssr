@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { PromoSectionComponent } from './sections/promo-section.component';
-import { GigsSectionComponent } from './sections/gigs-section.component';
-import { MusicSectionComponent } from './sections/music-section.component';
-import { AboutSectionComponent } from './sections/about-section.component';
-import { MerchSectionComponent } from './sections/merch-section.component';
-import { ContactSectionComponent } from './sections/contact-section.component';
+import { PromoSectionComponent } from './promo/promo-section.component';
+import { GigsSectionComponent } from './gigs/gigs-section.component';
+import { MusicSectionComponent } from './music/music-section.component';
+import { AboutSectionComponent } from './about/about-section.component';
+import { MerchSectionComponent } from './merch/merch-section.component';
+import { ContactSectionComponent } from './contact/contact-section.component';
 import { RouterOutlet } from '@angular/router';
 import { HeaderScrollDirective } from './scroll/header-scroll.directive';
 import { SmoothScrollDirective } from './scroll/smooth-scroll.directive';
