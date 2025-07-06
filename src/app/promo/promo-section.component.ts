@@ -1,13 +1,13 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { CountdownTimerComponent } from '../countdown-timer/countdown-timer.component';
 import { CarouselComponent } from '../carousel/carousel.component';
+import { UpdatesSectionComponent } from '../updates/updates-section.component';
 
 @Component({
   selector: 'app-promo-section',
   standalone: true,
   templateUrl: './promo-section.component.html',
   styleUrl: './promo-section.component.css',
-  imports: [CarouselComponent, CountdownTimerComponent]
+  imports: [CarouselComponent, UpdatesSectionComponent]
 })
 export class PromoSectionComponent {
   @Input() videoModalOpen = false;

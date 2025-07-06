@@ -2,19 +2,18 @@
   position: relative;
 }
 .carousel-inner {
-  display: flex;
+  position: relative;
   overflow: hidden;
 }
 .carousel-item {
-  flex: 0 0 100%;
-  opacity: 0;
-  transition: opacity 0.5s;
   position: absolute;
   width: 100%;
+  top: 0;
+  left: 0;
 }
 .carousel-item.active {
-  opacity: 1;
   position: relative;
+  z-index: 2;
 }
 .carousel-control-prev,
 .carousel-control-next {

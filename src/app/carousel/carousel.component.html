@@ -1,9 +1,11 @@
 <div class="carousel">
   <div class="carousel-inner">
     @for (slide of slides(); track slide; let i = $index) {
-      <div class="carousel-item" [class.active]="i === activeIndex" [style.display]="i === activeIndex ? '' : 'none'">
-        <ng-container *ngTemplateOutlet="slide"></ng-container>
-      </div>
+      @if (i === activeIndex){
+        <div class="carousel-item" [class.active]="i === activeIndex">
+          <ng-container *ngTemplateOutlet="slide"></ng-container>
+        </div>
+      }
     }
   </div>
   <button class="carousel-control-prev" (click)="prev()" aria-label="Previous">
