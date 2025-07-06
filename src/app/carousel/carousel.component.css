@@ -27,8 +27,8 @@
   z-index: 2;
 }
 .carousel-control-prev {
-  left: 10px;
+  left: -60px;
 }
 .carousel-control-next {
-  right: 10px;
+  right: -60px;
 }
