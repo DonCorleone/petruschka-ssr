@@ -408,6 +408,14 @@ label {
   background: url("../images/hero/hero-6.jpg") no-repeat center center;
   background-size: cover;
 }
+.promo-carousel-holder .slide-7 {
+  background: url("../images/hero/hero-7.jpg") no-repeat center center;
+  background-size: cover;
+}
+.promo-carousel-holder .slide-8 {
+  background: url("../images/hero/hero-8.jpg") no-repeat center center;
+  background-size: cover;
+}
 .overlay-mask {
   background: rgba(0, 0, 0, 0.4);
   position: absolute;
