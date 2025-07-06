@@ -1,208 +1,85 @@
-<!-- Migrated from index_.html template -->
-<header id="header" class="header fixed-top" appHeaderScroll>  
-    <div class="container ">       
-        <nav class="main-nav navbar navbar-expand-md" role="navigation">
-            <button class="navbar-toggler navbar-dark" type="button" (click)="navbarOpen = !navbarOpen" [attr.aria-expanded]="navbarOpen" aria-controls="navbar-collapse" aria-label="Toggle navigation">
-                <span class="toggle-title">Menu</span>
-                <span class="navbar-toggler-icon"></span>
-            </button>  
-            <div id="navbar-collapse" class="navbar-collapse collapse text-center justify-content-center" [class.show]="navbarOpen">
-                <ul class="nav navbar-nav">
-                    <li class="nav-item"><a class="nav-link scrollto" appSmoothScroll href="#promo">Home</a></li>
-                    <li class="nav-item"><a class="nav-link scrollto" appSmoothScroll href="#gigs">Gigs</a></li>
-                    <li class="nav-item"><a class="nav-link scrollto" appSmoothScroll href="#music">Music</a></li>                                            
-                    <li class="nav-item"><a class="nav-link scrollto" appSmoothScroll href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link scrollto" appSmoothScroll href="#merch">Merch</a></li>
-                    <li class="nav-item"><a class="nav-link scrollto" appSmoothScroll href="#contact">Contact</a></li>
-                </ul><!--//nav-->
-            </div><!--//navabr-collapse-->
-        </nav><!--//main-nav-->
-    </div><!--//container-->
-</header><!--//header-->
-
-<section id="promo" class="promo-section section">
-  <div class="promo-carousel-holder">
-    <app-carousel [slides]="[promoSlide1, promoSlide2, promoSlide3, promoSlide4, promoSlide5, promoSlide6]">
-      <ng-template #promoSlide1>
-        <div class="d-flex align-items-center justify-content-center min-vh-100 slide-1"></div>
-      </ng-template>
-      <ng-template #promoSlide2>
-        <div class="d-flex align-items-center justify-content-center min-vh-100 slide-2"></div>
-      </ng-template>
-      <ng-template #promoSlide3>
-        <div class="d-flex align-items-center justify-content-center min-vh-100 slide-3"></div>
-      </ng-template>
-      <ng-template #promoSlide4>
-        <div class="d-flex align-items-center justify-content-center min-vh-100 slide-4"></div>
-      </ng-template>
-      <ng-template #promoSlide5>
-        <div class="d-flex align-items-center justify-content-center min-vh-100 slide-5"></div>
-      </ng-template>
-      <ng-template #promoSlide6>
-        <div class="d-flex align-items-center justify-content-center min-vh-100 slide-6"></div>
-      </ng-template>
-    </app-carousel>
+<header id="header" class="header fixed-top" appHeaderScroll>
+  <div class="container">
+    <nav class="main-nav navbar navbar-expand-md" role="navigation">
+      <button
+        class="navbar-toggler navbar-dark"
+        type="button"
+        (click)="navbarOpen = !navbarOpen"
+        [attr.aria-expanded]="navbarOpen"
+        aria-controls="navbar-collapse"
+        aria-label="Toggle navigation"
+      >
+        <span class="toggle-title">Menu</span>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        id="navbar-collapse"
+        class="navbar-collapse collapse text-center justify-content-center"
+        [class.show]="navbarOpen"
+      >
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link scrollto" appSmoothScroll href="#promo">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link scrollto" appSmoothScroll href="#gigs">Gigs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link scrollto" appSmoothScroll href="#music">Music</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link scrollto" appSmoothScroll href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link scrollto" appSmoothScroll href="#merch">Merch</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link scrollto" appSmoothScroll href="#contact"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <!--//nav-->
+      </div>
+      <!--//navabr-collapse-->
+    </nav>
+    <!--//main-nav-->
   </div>
-  <div class="overlay-mask"></div>
-  <div class="container text-center promo-content">
-    <div class="upper-wrapper">
-      <h1 class="logo-holder"></h1>
-      <h2 class="headline">For Bands and Musicians</h2>
-      <div class="tagline">The Perfect Bootstrap Template to Promote Your Music</div>
-    </div>
-  </div><!--//container-->    
-  <div class="updates-block">
-  <div class="container updates-block-inner">
-    <app-carousel [slides]="[updatesSlide1, updatesSlide2, updatesSlide3]">
-      <ng-template #updatesSlide1>
-        <div class="carousel-item active">
-          <div class="media-holder">
-            <div class="media-thumb">
-              <img src="assets/images/video-thumb-1.jpg" alt="">
-              <a id="video-play-triggger" class="video-play-trigger" (click)="videoModalOpen = true"><i class="fas fa-play"></i></a>
-            </div>
-          </div>
-          <div class="carousel-content">
-            <h3 class="title">Decibel's EP is out July 18th 2024</h3>
-            <div class="desc">
-              <div class="countdown">
-                <app-countdown-timer targetDate="July 18, 2024"></app-countdown-timer> till release
-              </div>
-              <p class="intro">
-                Our forthcoming EP is available for pre-order via <a href="#">pledgemusic.com</a> now
-              </p>
-            </div>
-            <a class="btn btn-primary btn-cta" href="#">Pre-order Now</a>
-          </div>
-        </div>
-      </ng-template>
-      <ng-template #updatesSlide2>
-        <div class="carousel-item">
-          <div class="carousel-content no-media-holder">
-            <h3 class="title">We are performing at <a class="highlight" href="#">The Fleece, London</a> this Saturday night 9:00pm</h3>
-            <div class="desc">
-              <p class="intro">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes. <br><a href="#" class="more-link" (click)="infoModalOpen = true">Find out more</a>
-              </p>
-            </div>
-            <a class="btn btn-primary btn-cta" href="#">Buy Tickets</a>
-          </div>
-        </div>
-      </ng-template>
-      <ng-template #updatesSlide3>
-        <div class="carousel-item">
-          <div class="media-holder">
-            <div class="media-thumb">
-              <img src="assets/images/image-thumb-1.jpg" alt="">
-            </div>
-          </div>
-          <div class="carousel-content">
-            <h3 class="title">Help to fund our new album via <a href="#">KickStarter</a></h3>
-            <div class="desc">
-              <p class="intro">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes. <br><a href="#" class="more-link">More info</a>
-              </p>
-            </div>
-            <a class="btn btn-primary btn-cta" href="#">Support Us</a>
-          </div>
-        </div>
-      </ng-template>
-    </app-carousel>
-  </div>
-</div>
-</section><!--//promo-section-->
+  <!--//container-->
+</header>
 
-<section id="gigs" class="gigs-section section">
-    <div class="container">
-        <h2 class="section-title text-center">Upcoming Gigs</h2>
-        <div class="gigs-container">
-            <!-- Gigs items migrated from template -->
-            <div class="item">
-                <div class="date-label">
-                    <div class="number">16</div>
-                    <div class="month">OCT</div>
-                </div>
-                <div class="gig-info">
-                    <div class="info-content">
-                        <h3 class="gig-title">Decibel Lorem Ipsum, London</h3>
-                        <div class="meta">
-                            <ul class="meta-list list-inline">
-                                <li class="list-inline-item location">
-                                    <i class="fas fa-map-marker-alt"></i><a href="#">Dingwalls, London</a>
-                                </li>
-                                <li class="list-inline-item time">
-                                    <i class="far fa-clock"></i>9:00pm, Saturday
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="gig-actions">
-                        <a class="btn btn-xs btn-ghost-secondary" data-toggle="collapse" href="#info-extra-1" aria-expanded="false" aria-controls="info-extra-1" >More info</a>
-                        <a class="btn btn-xs btn-secondary" href="#">Buy Tickets</a>
-                    </div>
-                    <div id="info-extra-1" class="collapse info-extra">
-                        Sed feugiat varius felis pulvinar tincidunt. Donec bibendum fermentum justo, sit amet commodo augue porta in. Etiam lacinia quam vel ante <a href="#">link example</a> aliquam euismod. Nam vitae molestie purus. Suspendisse id erat quis leo molestie laoreet at eget libero. In eget ipsum leo.
-                    </div>
-                </div>
-            </div>
-            <!-- ...other gig items (copy from template as needed)... -->
-        </div>
-        <div class="gigs-contact text-center">
-            <h4 class="title">Want to book a private gig?</h4>
-            <p class="intro center-block">Sed et felis vitae odio lobortis imperdiet. Vivamus ex tellus, faucibus sed dui eu, mattis dictum leo. Suspendisse quis leo metus. Vivamus ut lacus nisi. Nulla facilisi</p>
-            <a class="btn btn-ghost-primary scrollto" href="#contact">Get in touch now</a>
-        </div>
-    </div>
-</section>
+<app-promo-section
+  [videoModalOpen]="videoModalOpen"
+  (videoModalOpenChange)="videoModalOpen = $event"
+  [infoModalOpen]="infoModalOpen"
+  (infoModalOpenChange)="infoModalOpen = $event"
+></app-promo-section>
+<!--//promo-section-->
 
-<section id="music" class="music-section section text-center">
-    <div class="container">
-        <h2 class="section-title">Music</h2>
-        <div class="sc-block ml-auto mr-auto">
-            <div class="item">
-                <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/54872955&amp;color=0E0E10&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-            </div>
-            <div class="item">
-                <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/44327523&amp;color=0E0E10&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-            </div>
-        </div>
-        <div class="albums-block">
-            <div class="row">
-                <!-- ...album items migrated from template... -->
-                <div class="item col-6 col-lg-4">
-                    <div class="item-inner">
-                        <h3 class="album-title">Album Title Lorem Ipsum</h3>
-                        <div class="cover-holder">
-                            <a class="cover-figure" href="#">
-                                <div class="arrow-holder"></div>
-                                <div class="record-holder"><img class="img-fluid" src="assets/images/record.png" alt=""></div>
-                                <img class="cover-image img-fluid" src="assets/images/albums/album-cover-1.jpg" alt="">
-                                <div class="cover-label">Coming Soon</div>
-                            </a>
-                            <a href="#" class="btn btn-sm btn-ghost-secondary">Pre-Order Album</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- ...other album items... -->
-            </div>
-        </div>
-        <div class="music-action">
-            <a class="btn btn-ghost-primary" href="#">Music on iTunes</a>
-        </div>
-    </div>
-</section>
+<app-gigs-section></app-gigs-section>
 
-
-
-<footer class="footer">
-    <div class="container">
-        <div class="footer-content text-center">
-            <div class="copyright">Template Copyright &#64; <a href="http://themes.3rdwavemedia.com/" target="_blank">3rd Wave Media</a></div>  
-        </div>
-    </div>
-</footer>
+<app-music-section />
 
 <router-outlet />
+
+<app-about-section/>
+
+<app-merch-section/>
+
+<app-contact-section/>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content text-center">
+      <div class="copyright">
+        Template Copyright &#64;
+        <a href="http://themes.3rdwavemedia.com/" target="_blank"
+          >3rd Wave Media</a
+        >
+      </div>
+    </div>
+  </div>
+</footer>
 
 <app-modal [open]="videoModalOpen" (close)="videoModalOpen = false">
   <div modal-title>
@@ -211,7 +88,11 @@
   <div modal-body>
     <div class="video-container">
       <div class="ratio ratio-16x9">
-        <iframe src="https://www.youtube.com/embed/mCHUw7ACS8o?rel=0" title="YouTube video" allowfullscreen></iframe>
+        <iframe
+          src="https://www.youtube.com/embed/mCHUw7ACS8o?rel=0"
+          title="YouTube video"
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
   </div>
@@ -219,104 +100,29 @@
 
 <app-modal [open]="infoModalOpen" (close)="infoModalOpen = false">
   <div modal-title>
-    <h4 class="modal-title text-center">We are performing at The Fleece, Bristol</h4>
+    <h4 class="modal-title text-center">
+      We are performing at The Fleece, Bristol
+    </h4>
   </div>
   <div modal-body>
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim <a href="#">mollis pretium</a> justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+      ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+      dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
+      nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+      Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
+      enim <a href="#">mollis pretium</a> justo, rhoncus ut, imperdiet a,
+      venenatis vitae, justo. Nullam dictum felis eu pede.
+    </p>
     <div class="center-block text-center">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2486.319931873737!2d-2.59156458423205!3d51.45228217962615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48718e7bd5fd30fd%3A0x9acbbf4d84e5ca8c!2sThe+Fleece!5e0!3m2!1sen!2sus!4v1454805283508" width="640" height="360" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2486.319931873737!2d-2.59156458423205!3d51.45228217962615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48718e7bd5fd30fd%3A0x9acbbf4d84e5ca8c!2sThe+Fleece!5e0!3m2!1sen!2sus!4v1454805283508"
+        width="640"
+        height="360"
+        frameborder="0"
+        style="border: 0"
+        allowfullscreen
+      ></iframe>
     </div>
   </div>
 </app-modal>
-
-<section id="about" class="about-section section text-center">
-    <div class="container">
-        <h2 class="section-title">About</h2>
-        <div class="section-intro ml-auto mr-auto">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</div>
-        <div class="members-block">
-            <div class="row">
-                <!-- ...member items migrated from template... -->
-                <div class="item col-6 col-lg-3">
-                    <div class="item-inner">
-                        <div class="member-profile">
-                            <img class="img-fluid" src="assets/images/members/member-1.png" alt="">
-                        </div>
-                        <div class="member-label">Vocals</div>
-                        <h3 class="member-name">Daniel Contreras</h3>
-                        <div class="member-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ipsum neque, ornare vitae auctor vitae, blandit sit amet metus. Nulla vestibulum sem odio, eget tempor nisl mattis et.</div>
-                    </div>
-                </div>
-                <!-- ...other member items... -->
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="merch" class="merch-section section text-center">
-    <div class="container">
-        <h2 class="section-title">Merch Store</h2>
-        <div class="row">
-            <!-- ...merch items migrated from template... -->
-            <div class="item col-12 col-md-6">
-                <div class="item-inner">
-                    <img class="img-fluid" src="assets/images/merch/merch-1.jpg" alt="">
-                    <a class="mask" href="#">
-                        <span class="mask-inner">
-                            <span class="item-title">Band T-Shirt $20</span>
-                            <span class="desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor aenean massa.</span>
-                            <span class="btn btn-primary btn-cta">Buy Now</span>
-                        </span>
-                    </a>
-                </div>
-            </div>
-            <!-- ...other merch items... -->
-        </div>
-        <div class="merch-action">
-            <a class="btn btn-ghost-primary" href="#">View All Items</a>
-        </div>
-    </div>
-</section>
-
-<div id="contact" class="contact-section section text-center">
-    <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <div class="section-intro center-block">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis.</div>
-        <div class="contact-block mr-auto ml-auto">
-            <div class="row">
-                <!-- ...contact items migrated from template... -->
-                <div class="item col-12 col-lg-4">
-                    <div class="item-inner">
-                        <div class="icon-holder">
-                            <i class="fas fa-info-circle"></i>
-                        </div>
-                        <h4 class="title">General</h4>
-                        <div class="email"><a href="#">info&#64;website.com</a></div>
-                    </div>
-                </div>
-                <!-- ...other contact items... -->
-            </div>
-        </div>
-        <div class="channels-block">
-            <ul class="channels-list list-inline">
-                <li class="list-inline-item mr-3"><a href="#"><img class="icon" src="assets/images/itunes.svg" alt=""></a></li>
-                <li class="list-inline-item mr-3"><a href="#"><img class="icon" src="assets/images/lastfm.svg" alt=""></a></li>
-                <li class="list-inline-item mr-0 mr-md-3"><a href="#"><img class="icon" src="assets/images/vevo.svg" alt=""></a></li>
-                <li class="d-block d-md-none"></li>
-                <li class="list-inline-item mr-3"><a href="#"><img class="icon" src="assets/images/bandcamp.svg" alt=""></a></li>
-                <li class="list-inline-item mr-0"><a href="#"><img class="icon" src="assets/images/deezer.svg" alt=""></a></li>
-            </ul>
-        </div>
-        <div class="social-media-block">
-            <ul class="list-inline social-media-list">
-                <li class="list-inline-item mr-3"><a href="#"><i class="fab fa-youtube"></i></a></li>
-                <li class="list-inline-item mr-3"><a href="#"><i class="fab fa-soundcloud"></i></a></li>
-                <li class="list-inline-item mr-0 mr-sm-3"><a href="#"><i class="fab fa-spotify"></i></a></li>
-                <li class="d-block d-sm-none"></li>
-                <li class="list-inline-item mr-3"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li class="list-inline-item mr-3"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                <li class="list-inline-item mr-0"><a href="#"><i class="fab fa-twitter"></i></a></li>
-            </ul>
-  </div>
-    </div>
-    </div>
-  

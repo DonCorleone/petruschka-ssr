@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
+import { PromoSectionComponent } from './sections/promo-section.component';
+import { GigsSectionComponent } from './sections/gigs-section.component';
+import { MusicSectionComponent } from './sections/music-section.component';
+import { AboutSectionComponent } from './sections/about-section.component';
+import { MerchSectionComponent } from './sections/merch-section.component';
+import { ContactSectionComponent } from './sections/contact-section.component';
 import { RouterOutlet } from '@angular/router';
 import { HeaderScrollDirective } from './scroll/header-scroll.directive';
 import { SmoothScrollDirective } from './scroll/smooth-scroll.directive';
-import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
-import { CarouselComponent } from './carousel/carousel.component';
 import { ModalComponent } from './modal/modal.component';
 
 @Component({
@@ -12,9 +16,13 @@ import { ModalComponent } from './modal/modal.component';
     RouterOutlet,
     HeaderScrollDirective,
     SmoothScrollDirective,
-    CountdownTimerComponent,
-    CarouselComponent,
-    ModalComponent
+    ModalComponent,
+    PromoSectionComponent,
+    GigsSectionComponent,
+    MusicSectionComponent,
+    AboutSectionComponent,
+    MerchSectionComponent,
+    ContactSectionComponent
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
@@ -24,7 +32,5 @@ export class App {
   videoModalOpen = false;
   infoModalOpen = false;
   navbarOpen = false;
-  aboutVisible = false;
-  merchVisible = false;
-  contactVisible = false;
+
 }
