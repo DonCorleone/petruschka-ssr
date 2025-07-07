@@ -350,6 +350,7 @@ label {
 .footer-content {
   padding: 15px;
 }
+/*
 .promo-section {
   height: 100vh;
   width: 100%;
@@ -451,6 +452,7 @@ label {
   font-size: 24px;
   margin-bottom: 90px;
 }
+*/
 .updates-block {
   position: absolute;
   z-index: 30;
