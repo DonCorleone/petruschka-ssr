@@ -5,7 +5,6 @@ import { MusicSectionComponent } from './music/music-section.component';
 import { AboutSectionComponent } from './about/about-section.component';
 import { MerchSectionComponent } from './merch/merch-section.component';
 import { ContactSectionComponent } from './contact/contact-section.component';
-import { RouterOutlet } from '@angular/router';
 import { HeaderScrollDirective } from './scroll/header-scroll.directive';
 import { SmoothScrollDirective } from './scroll/smooth-scroll.directive';
 import { ModalComponent } from './modal/modal.component';
@@ -13,7 +12,7 @@ import { ModalComponent } from './modal/modal.component';
 @Component({
   selector: 'app-root',
   imports: [
-    RouterOutlet,
+  
     HeaderScrollDirective,
     SmoothScrollDirective,
     ModalComponent,

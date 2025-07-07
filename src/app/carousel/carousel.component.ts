@@ -1,4 +1,10 @@
-import { Component, input, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core';
+import {
+  Component,
+  input,
+  OnInit,
+  OnDestroy,
+  ChangeDetectorRef,
+} from '@angular/core';
 // import { trigger, transition, style, animate, query, group } from '@angular/animations';
 import { NgTemplateOutlet } from '@angular/common';
 
@@ -39,7 +45,8 @@ export class CarouselComponent implements OnInit, OnDestroy {
   }
 
   prev(isManual = true) {
-    this.activeIndex = (this.activeIndex - 1 + this.slides().length) % this.slides().length;
+    this.activeIndex =
+      (this.activeIndex - 1 + this.slides().length) % this.slides().length;
     this.cdr.markForCheck();
     if (isManual) this.stopAutoSlide();
   }

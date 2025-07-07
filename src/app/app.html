@@ -42,7 +42,6 @@
       </div>
     </nav>
   </div>
-  
 </header>
 
 <app-promo-section
@@ -52,18 +51,45 @@
   (infoModalOpenChange)="infoModalOpen = $event"
 ></app-promo-section>
 
+<section id="gigs" class="gigs-section section">
+  @defer (on viewport) {
+  <app-gigs-section />
+  } @placeholder {
+  <div>...</div>
+  }
+</section>
 
-<app-gigs-section></app-gigs-section>
+<section id="music" class="music-section section text-center">
+  @defer (on viewport) {
+  <app-music-section />
+  } @placeholder {
+  <div>...</div>
+  }
+</section>
 
-<app-music-section />
+<section id="about" class="about-section section text-center">
+  @defer (on viewport) {
+  <app-about-section />
+  } @placeholder {
+  <div>...</div>
+  }
+</section>
 
-<router-outlet />
+<section id="merch" class="merch-section section text-center">
+  @defer (on viewport) {
+  <app-merch-section />
+  } @placeholder {
+  <div>...</div>
+  }
+</section>
 
-<app-about-section/>
-
-<app-merch-section/>
-
-<app-contact-section/>
+<div id="contact" class="contact-section section text-center">
+  @defer (on viewport) {
+  <app-contact-section />
+  } @placeholder {
+  <div>...</div>
+  }
+</div>
 
 <footer class="footer">
   <div class="container">
