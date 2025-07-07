@@ -85,7 +85,9 @@
   text-indent: -9999px;
   overflow: hidden;
   background-size: contain;
+  background-image: url("/assets/images/logo-8.svg");
 }
+
 .promo-content {
   padding-top: 80px;
   position: relative;
@@ -101,3 +103,27 @@
   margin-bottom: 90px;
 }
 /* ...existing code from sections/promo-section.component.css... */
+@media (max-width: 767.98px) {
+  .promo-section {
+    height: auto;
+  }
+  .promo-content {
+    padding-top: 0px;
+  }
+  .promo-content .headline {
+    font-size: 30px;
+  }
+  .promo-content .tagline {
+    font-size: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .promo-content {
+    padding-top: 30px;
+  }
+}
+@media (min-width: 992px) {
+  .promo-content {
+    padding-top: 80px;
+  }
+}

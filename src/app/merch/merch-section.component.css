@@ -63,3 +63,9 @@
 .merch-section .merch-action {
   margin-top: 30px;
 }
+
+@media (max-width: 767.98px) {
+  .merch-section .mask-inner {
+    padding-top: 30px;
+  }
+}

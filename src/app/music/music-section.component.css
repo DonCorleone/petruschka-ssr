@@ -90,3 +90,39 @@
 .music-section .music-action {
   margin-top: 30px;
 }
+
+@media (max-width: 767.98px) {
+  .music-section .albums-block .item-inner {
+    padding: 0px;
+  }
+  .music-section .albums-block .album-title {
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .music-section .albums-block .cover-figure {
+    max-width: 100%;
+    max-height: inherit;
+  }
+  .music-section .albums-block .cover-figure .record-holder {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .music-section .albums-block .cover-figure .record-holder {
+    right: -60px;
+  }
+  .music-section .albums-block .cover-figure:hover .record-holder {
+    right: -80px;
+  }
+}
+@media (min-width: 992px) {
+  .music-section .albums-block .cover-figure .record-holder {
+    right: -80px;
+  }
+  .music-section .albums-block .cover-figure:hover .record-holder {
+    right: -118px;
+  }
+}

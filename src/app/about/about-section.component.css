@@ -43,3 +43,10 @@
   font-size: 14px;
   margin-bottom: 30px;
 }
+
+@media (max-width: 767.98px) {
+  .about-section .item-inner {
+    padding: 15px;
+  }
+}
+  

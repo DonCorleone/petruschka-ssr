@@ -125,3 +125,69 @@
   color: #ec3a81;
 }
 /* Add any updates-block specific styles here, or leave empty to inherit global styles */
+@media (max-width: 767.98px) {
+  .updates-block {
+    position: relative;
+    height: inherit;
+    bottom: 0;
+    min-height: 400px;
+  }
+  .updates-block .media-holder {
+    position: static;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .updates-block .carousel-content {
+    padding-left: 0;
+  }
+  .updates-block .carousel-content .btn-cta {
+    position: static;
+  }
+  .updates-block .carousel .item {
+    height: inherit;
+  }
+  .updates-block .glyphicon-chevron-right {
+    right: -45px;
+  }
+  .updates-block .glyphicon-chevron-left {
+    left: -45px;
+  }
+  .updates-block .carousel .carousel-item {
+    height: inherit;
+  }
+}
+
+@media (min-width: 768px) {
+  .updates-block {
+    height: 260px;
+  }
+  .updates-block .carousel-content .btn-cta {
+    position: static;
+  }
+  .updates-block .carousel .item {
+    height: 200px;
+  }
+  .updates-block .glyphicon-chevron-right {
+    right: -45px;
+  }
+  .updates-block .glyphicon-chevron-left {
+    left: -45px;
+  }
+}
+@media (min-width: 992px) {
+  .updates-block {
+    height: 160px;
+  }
+  .updates-block .carousel-content .btn-cta {
+    position: absolute;
+  }
+  .updates-block .carousel .item {
+    height: 100px;
+  }
+  .updates-block .glyphicon-chevron-right {
+    right: -60px;
+  }
+  .updates-block .glyphicon-chevron-left {
+    left: -60px;
+  }
+}
