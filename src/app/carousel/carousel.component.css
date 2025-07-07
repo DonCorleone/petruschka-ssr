@@ -25,9 +25,4 @@
   font-size: 2rem;
   z-index: 2;
 }
-.carousel-control-prev {
-  left: -60px;
-}
-.carousel-control-next {
-  right: -60px;
-}
+
