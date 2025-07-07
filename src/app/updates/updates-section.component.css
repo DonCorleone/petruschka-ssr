@@ -1,1 +1,127 @@
+/* Updates Block Styles (migrated from theme-8.css) */
+.updates-block {
+  position: absolute;
+  z-index: 30;
+  bottom: 2px;
+  width: 100%;
+  height: 160px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+.updates-block .updates-block-inner {
+  padding-left: 60px;
+  padding-right: 60px;
+  position: relative;
+}
+.updates-block .carousel-inner {
+  min-height: 100px;
+}
+.updates-block .media-holder {
+  display: inline-block;
+  position: absolute;
+  width: 170px;
+  height: 100px;
+  left: 0;
+}
+.updates-block .media-thumb {
+  position: relative;
+}
+.updates-block .video-play-trigger {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  left: 50%;
+  margin-left: -18px;
+  text-align: center;
+  z-index: 5;
+  top: 50%;
+  margin-top: -18px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  cursor: pointer;
+}
+.updates-block .video-play-trigger:hover {
+  background: rgba(236, 58, 129, 0.6);
+}
+.updates-block .video-play-trigger .svg-inline--fa {
+  color: #fff;
+  font-size: 14px;
+  margin-top: 11px;
+  margin-left: 4px;
+}
+.updates-block .carousel-control-prev {
+  left: -60px;
+}
+.updates-block .carousel-control-next {
+  right: -60px;
+}
+.updates-block .carousel-control-next,
+.updates-block .carousel-control-prev {
+  width: auto;
+}
+.updates-block .carousel-control-next:hover,
+.updates-block .carousel-control-prev:hover {
+  -webkit-opacity: 0.6;
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+}
+.updates-block .carousel-control-prev-icon {
+  background: transparent url("../../assets/images/left-arrow.svg") no-repeat left top;
+  width: 23px;
+  height: 40px;
+  left: -60px;
+}
+.updates-block .carousel-control-next-icon {
+  background: transparent url("../../assets/images/right-arrow.svg") no-repeat right top;
+  width: 23px;
+  height: 40px;
+  right: -60px;
+}
+.updates-block .carousel .carousel-item {
+  height: 100px;
+}
+.updates-block .carousel-content {
+  padding-left: 200px;
+  max-width: 760px;
+}
+.updates-block .carousel-content.no-media-holder {
+  padding-left: 0;
+  max-width: 620px;
+}
+.updates-block .carousel-content.no-media-holder .title {
+  margin-bottom: 15px;
+}
+.updates-block .carousel-content .title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.updates-block .carousel-content .btn-cta {
+  position: absolute;
+  right: 0;
+  top: 30px;
+}
+.updates-block .carousel-content .desc {
+  color: rgba(255, 255, 255, 0.6);
+}
+.updates-block .carousel-content .desc a {
+  color: #fff;
+}
+.updates-block .carousel-content .desc a.more-link {
+  color: #ec3a81;
+  vertical-align: middle;
+}
+.updates-block .carousel-content .desc a.more-link:hover {
+  color: #de1565;
+}
+.updates-block .carousel-content .highlight {
+  color: #ec3a81;
+}
 /* Add any updates-block specific styles here, or leave empty to inherit global styles */
