@@ -672,7 +672,9 @@ label {
   margin-top: 15px;
 }
 */
+/*
 .music-section {
+
   background: #f5f5f5;
 }
 .music-section .sc-block {
@@ -763,7 +765,7 @@ label {
 .music-section .music-action {
   margin-top: 30px;
 }
-/*
+*/
 .about-section .section-title {
   margin-bottom: 30px;
 }
@@ -808,7 +810,6 @@ label {
   font-size: 14px;
   margin-bottom: 30px;
 }
-*/
 .social-block {
   padding-top: 90px;
 }
@@ -844,6 +845,7 @@ label {
   z-index: 10;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
+/*
 .merch-section {
   background: #f5f5f5;
 }
@@ -872,6 +874,7 @@ label {
   -moz-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   -webkit-opacity: 0;
   -moz-opacity: 0;
   opacity: 0;
@@ -907,6 +910,7 @@ label {
 .merch-section .merch-action {
   margin-top: 30px;
 }
+*/
 .contact-section {
   background: #101113;
   color: rgba(255, 255, 255, 0.75);
