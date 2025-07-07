@@ -52,18 +52,45 @@
   (infoModalOpenChange)="infoModalOpen = $event"
 ></app-promo-section>
 
+<div id="gigs">
+  @defer (on viewport) {
+    <app-gigs-section />
+  } @placeholder {
+    <div class="section-placeholder">...</div>
+  }
+</div>
 
-<app-gigs-section></app-gigs-section>
+<div id="music">
+  @defer (on viewport) {
+    <app-music-section />
+  } @placeholder {
+    <div class="section-placeholder">...</div>
+  }
+</div>
 
-<app-music-section />
+<div id="about">
+  @defer (on viewport) {
+    <app-about-section />
+  } @placeholder {
+    <div class="section-placeholder">...</div>
+  }
+</div>
 
-<router-outlet />
+<div id="merch">
+  @defer (on viewport) {
+    <app-merch-section />
+  } @placeholder {
+    <div class="section-placeholder">...</div>
+  }
+</div>
 
-<app-about-section/>
-
-<app-merch-section/>
-
-<app-contact-section/>
+<div id="contact">
+  @defer (on viewport) {
+    <app-contact-section />
+  } @placeholder {
+    <div class="section-placeholder">...</div>
+  }
+</div>
 
 <footer class="footer">
   <div class="container">
@@ -77,6 +104,8 @@
     </div>
   </div>
 </footer>
+
+<router-outlet />
 
 <app-modal [open]="videoModalOpen" (close)="videoModalOpen = false">
   <div modal-title>
