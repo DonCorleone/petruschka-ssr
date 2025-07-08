@@ -17,7 +17,7 @@
         class="navbar-collapse collapse text-center justify-content-center"
         [class.show]="navbarOpen"
       >
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav" (click)="navbarOpen = false">
           <li class="nav-item">
             <a class="nav-link scrollto" appSmoothScroll href="#promo">Home</a>
           </li>
